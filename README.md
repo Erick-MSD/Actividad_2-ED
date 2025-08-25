@@ -209,7 +209,7 @@ Peek → 2
 
 * Erick Mauricio Santiago Díaz (@Erick-MSD)
 * Josué David Murillo Gómez (@Josuemgd15)
-* Santiago Sebastian Rojo Marquez (@Sanlaan)
+* Santiago Sebastian Rojo Márquez (@Sanlaan)
 * Daniel Isai Sanchez Guadarrama (@DanielIsaiSG)
 
 ```
