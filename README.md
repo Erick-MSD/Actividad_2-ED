@@ -204,6 +204,10 @@ Peek → 2
 
 ---
 
+### 🧠 Conclusión
+
+La Actividad 2 nos permitió llevar a la práctica la implementación de estructuras de datos fundamentales mediante listas enlazadas, a partir de las cuales se desarrollaron pilas y colas. Con el uso de Java y un entorno de consola interactivo, se cumplieron los objetivos planteados al comprobar el funcionamiento de operaciones básicas como inserción, eliminación, búsqueda y visualización. 
+Las validaciones realizadas, tanto en la ejecución del programa como en el archivo de pruebas, permitieron analizar el comportamiento de cada estructura y contrastar su eficiencia respecto a las implementaciones estándar. De esta manera, la actividad cumplió su propósito al demostrar de forma práctica cómo estas estructuras lineales constituyen la base para la gestión y organización de datos en el desarrollo de software.
 
 ## ✨ Autores
 
