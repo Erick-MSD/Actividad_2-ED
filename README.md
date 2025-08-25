@@ -206,8 +206,9 @@ Peek → 2
 
 ### 🧠 Conclusión
 
-La Actividad 2 nos permitió llevar a la práctica la implementación de estructuras de datos fundamentales mediante listas enlazadas, a partir de las cuales se desarrollaron pilas y colas. Con el uso de Java y un entorno de consola interactivo, se cumplieron los objetivos planteados al comprobar el funcionamiento de operaciones básicas como inserción, eliminación, búsqueda y visualización. 
-Las validaciones realizadas, tanto en la ejecución del programa como en el archivo de pruebas, permitieron analizar el comportamiento de cada estructura y contrastar su eficiencia respecto a las implementaciones estándar. De esta manera, la actividad cumplió su propósito al demostrar de forma práctica cómo estas estructuras lineales constituyen la base para la gestión y organización de datos en el desarrollo de software.
+La Actividad 2 nos permitió, como equipo, poner en práctica la implementación de estructuras de datos fundamentales mediante listas enlazadas (simples, dobles y circulares), a partir de las cuales desarrollamos pilas y colas. Con el uso de Java y un entorno de consola interactivo comprobamos el funcionamiento de operaciones básicas como inserción, eliminación, búsqueda y visualización, lo que facilitó entender tanto la lógica de cada estructura como sus diferencias de eficiencia.
+Durante el desarrollo identificamos que ciertas operaciones, como insertar o eliminar al inicio, son rápidas en todas las variantes (O(1)), mientras que otras, como la inserción al final o la búsqueda, presentan distintos niveles de complejidad según la estructura. Estas pruebas, realizadas tanto en la ejecución del programa como en el archivo de test, nos ayudaron a analizar el rendimiento de cada implementación y a compararlo con las librerías estándar de Java.
+En conclusión, la actividad cumplió su propósito al reforzar de manera práctica y colaborativa la comprensión de estas estructuras lineales, evidenciando que constituyen la base para el manejo y organización eficiente de datos en el desarrollo de software.
 
 ## ✨ Autores
 
