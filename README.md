@@ -1,160 +1,215 @@
-# Actividad_2-ED
-Actividad 2 de la Materia de Estructura de Datos
+# Actividad 2 – Estructura de Datos
 
-Este proyecto implementa una **clase genérica `LinkedList`** que simula el comportamiento de tres tipos de listas enlazadas en Java:
+Este proyecto corresponde a la **Actividad 2** de la materia de **Estructura de Datos**.  
+Implementa diferentes tipos de **listas enlazadas** (simple, doble y circular) y, a partir de ellas, estructuras derivadas como **pilas** y **colas**.
 
-- ✅ **Lista simplemente enlazada** → Cada nodo apunta al siguiente.  
-- ✅ **Lista doblemente enlazada** → Cada nodo apunta al anterior y al siguiente.  
-- ✅ **Lista circular** → El último nodo se conecta con el primero.  
+---
 
-El programa incluye un **menú interactivo** para:
-- Insertar datos.
-- Eliminar datos.
-- Buscar datos.
-- Mostrar todos los elementos.
-- Insertar ejemplos automáticamente (`DataTypeExamples`).
+## 🎯 Objetivo
 
-Es útil para **aprender estructuras de datos** y practicar con **listas enlazadas** en Java.
+El objetivo de este proyecto es **comprender e implementar manualmente** estructuras lineales clásicas, comparando su funcionamiento y eficiencia frente a la librería estándar de Java.  
 
 
+---
 
-## 🚀 Tecnologías utilizadas
-- **Java (JDK 8 o superior)**
-- **Scanner** → Lectura de datos del usuario.
-- **LinkedList (implementación personalizada)**.
-- **DataTypeExamples** → Inserta datos de prueba automáticamente.
+## 📂 Estructura del proyecto
 
+```
 
+├── LinkedList.java        # Clase genérica para listas enlazadas
+├── Node.java              # Nodo que almacena valor y referencias
+├── Pila.java              # Implementación de pila (LIFO) con LinkedList
+├── Cola.java              # Implementación de cola (FIFO) con LinkedList
+├── DataTypeExamples.java  # Inserta datos de prueba
+├── Main.java              # Menú principal interactivo
+├── OSManagementDemo.java  # Demo tipo gestor de procesos/colas
+├── StackQueueTests.java   # Pruebas de pila y cola
+├── run.ps1                # Script de compilación/ejecución en Windows
+└── README.md
 
-## 📂 Estructura del programa
-
-### **1️⃣ Selección del tipo de lista**
-Al iniciar, se pide elegir el tipo de lista:
-
-```java
-System.out.println("--- Selecciona el tipo de lista ---");
-System.out.println("1. Simplemente enlazada");
-System.out.println("2. Doblemente enlazada");
-System.out.println("3. Circular");
 ````
 
-Según tu elección, se crea la lista:
-
-```java
-if (tipo == 1) lista = new LinkedList<>(false, false);
-else if (tipo == 2) lista = new LinkedList<>(true, false);
-else lista = new LinkedList<>(false, true);
-```
-
-* Primer parámetro: `true` si es doblemente enlazada.
-* Segundo parámetro: `true` si es circular.
-* Por defecto: lista simplemente enlazada.
+> 💡 Sugerencia: se recomienda ejecutar el proyecto dentro de un IDE (IntelliJ, Eclipse, VS Code con extensión Java) para mayor comodidad.
 
 ---
 
-### **2️⃣ Menú interactivo**
+## 📝 Descripción general del programa
 
-Después de elegir la lista aparece el menú:
+El programa es una aplicación de consola que permite crear y manipular listas enlazadas personalizadas.
+Su objetivo es mostrar de manera práctica cómo funcionan las listas simplemente enlazadas, doblemente enlazadas y circulares, además de demostrar cómo a partir de ellas se pueden construir otras estructuras de datos como pilas (LIFO) y colas (FIFO).
 
-```
---- Menú ---
-1. Insertar dato
-2. Eliminar dato
-3. Buscar dato
-4. Mostrar lista
-5. Insertar ejemplos de DataTypeExamples
-0. Salir
-```
+A través de un menú interactivo, el usuario puede:
 
-Este menú se repite hasta seleccionar **0 (Salir)**.
+- Insertar, eliminar y buscar elementos en la lista.
+- Visualizar los elementos almacenados.
+- Insertar datos de ejemplo automáticamente para realizar pruebas rápidas.
+
+De esta manera, el proyecto no solo implementa las estructuras, sino que también ofrece un entorno para experimentar con sus operaciones básicas, analizar sus diferencias y comprender la eficiencia de cada variante.
 
 ---
 
-### **3️⃣ Funcionalidades principales**
+## ⚙️ Requisitos
 
-| Opción | Funcionalidad     | Descripción                              |
-| ------ | ----------------- | ---------------------------------------- |
-| 1      | Insertar dato     | Agrega un valor al final de la lista.    |
-| 2      | Eliminar dato     | Solicita un valor y lo borra si existe.  |
-| 3      | Buscar dato       | Verifica si un valor está en la lista.   |
-| 4      | Mostrar lista     | Imprime todos los elementos.             |
-| 5      | Insertar ejemplos | Inserta datos de prueba automáticamente. |
-| 0      | Salir             | Termina el programa.                     |
+- **Java JDK 8** o superior (probado con JDK 17).  
+- PowerShell (Windows) o terminal Bash (Linux/macOS).  
 
 ---
 
-### 🔄 Flujo de ejecución (diagrama)
-
-```mermaid
-flowchart TD
-    A[Inicio] --> B[Seleccionar tipo de lista]
-    B --> C[Crear LinkedList personalizada]
-    C --> D[Mostrar menú principal]
-    D -->|1 Insertar| E[Agregar elemento]
-    D -->|2 Eliminar| F[Quitar elemento]
-    D -->|3 Buscar| G[Comprobar existencia]
-    D -->|4 Mostrar| H[Imprimir en consola]
-    D -->|5 Ejemplos| I[Agregar datos de prueba]
-    D -->|0 Salir| J[Finalizar]
-    E --> D
-    F --> D
-    G --> D
-    H --> D
-    I --> D
-```
+## ⚙️ Tecnologías utilizadas
+- Java (JDK 8 o superior)
+- Scanner → Lectura de datos del usuario.
+- LinkedList (implementación personalizada).
+- DataTypeExamples → Inserta datos de prueba automáticamente.
 
 ---
 
-## ⚙️ Ejecución
+## 🚀 Ejecución
 
-### 🔹 En Windows (PowerShell)
-
-1. Abrir PowerShell y situarse en la carpeta del proyecto.
-2. Ejecutar el script incluido (`run.ps1`) para compilar y correr la demo principal (`OSManagementDemo`):
-
+### En Windows (PowerShell)
 ```powershell
 .\run.ps1
-```
+````
 
-> El script usa `javac --release 8` y luego ejecuta `OSManagementDemo`.
+Este script compila y ejecuta la clase `OSManagementDemo`.
 
-3. Ejecutar pruebas ligeras (`Pila` y `Cola`):
+### En Linux/macOS
 
-```powershell
+```bash
 javac --release 8 *.java
-java StackQueueTests
-```
-
----
-
-### 🔹 En cualquier sistema (manual)
-
-1. Compilar:
-
-```bash
-javac Main.java
-```
-
-2. Ejecutar:
-
-```bash
 java Main
 ```
 
 ---
 
-## 📦 Archivos añadidos en esta entrega
+## 📖 Uso
 
-* `run.ps1` → Script PowerShell para compilar y ejecutar la demo.
-* `StackQueueTests.java` → Pruebas básicas de `Pila` y `Cola`.
-* `.gitignore` → Excluye archivos compilados (`*.class`).
+Al ejecutar el programa, se solicita elegir el **tipo de lista enlazada**:
+
+* Lista simplemente enlazada
+* Lista doblemente enlazada
+* Lista circular
+
+Luego se muestra un menú interactivo:
+
+| *Opción* | *Funcionalidad* | *Descripción*                                                       |
+| ---------- | ----------------- | --------------------------------------------------------------------- |
+| *1*      | Insertar dato     | Pide un valor y lo agrega al final de la lista.                       |
+| *2*      | Eliminar dato     | Solicita un valor y lo borra si existe.                               |
+| *3*      | Buscar dato       | Verifica si un valor está en la lista.                                |
+| *4*      | Mostrar lista     | Imprime todos los elementos de la lista.                              |
+| *5*      | Insertar ejemplos | Inserta automáticamente datos predefinidos usando DataTypeExamples. |
+| *0*      | Salir             | Termina el programa.                                                  |
+
+
+Ejemplo de salida en consola:
+
+```
+Seleccione tipo de lista:
+1. Simple
+2. Doble
+3. Circular
+> 1
+Lista simplemente enlazada creada.
+Menú principal:
+1. Insertar dato
+2. Eliminar dato
+3. Buscar dato
+4. Mostrar lista
+5. Insertar ejemplos
+0. Salir
+```
 
 ---
 
-## 📌 Notas importantes
+## 🧩 API esencial
 
-* La clase `LinkedList` es **implementación propia**, no la de `java.util`.
-* Si no ingresas nada válido, se usa **lista simplemente enlazada por defecto**.
-* El menú es **interactivo** y se repite hasta elegir **Salir (0)**.
+### LinkedList\<T>
+
+| Método        | Descripción                                     |
+| ------------- | ----------------------------------------------- |
+| `add(T val)`  | Inserta un elemento al final                    |
+| `remove(T v)` | Elimina el primer elemento igual a `v`          |
+| `contains(v)` | Devuelve `true` si el elemento está en la lista |
+| `size()`      | Número de elementos                             |
+| `isEmpty()`   | Devuelve `true` si está vacía                   |
+| `clear()`     | Elimina todos los elementos                     |
+
+### Pila\<T>
+
+| Método    | Descripción                 |
+| --------- | --------------------------- |
+| `push(v)` | Inserta elemento en la pila |
+| `pop()`   | Extrae el último elemento   |
+| `peek()`  | Consulta el último elemento |
+
+### Cola\<T>
+
+| Método       | Descripción                 |
+| ------------ | --------------------------- |
+| `enqueue(v)` | Inserta elemento en la cola |
+| `dequeue()`  | Extrae el primer elemento   |
+| `peek()`     | Consulta el primer elemento |
+
+---
+
+## ⏱️ Complejidad
+
+| Operación             | Lista simple | Lista doble | Lista circular |
+| --------------------- | ------------ | ----------- | -------------- |
+| Inserción al inicio   | O(1)         | O(1)        | O(1)           |
+| Inserción al final    | O(n)         | O(1)        | O(1)           |
+| Eliminación al inicio | O(1)         | O(1)        | O(1)           |
+| Eliminación al final  | O(n)         | O(1)        | O(1)           |
+| Búsqueda por valor    | O(n)         | O(n)        | O(n)           |
+
+---
+
+## 🔄 Diagrama de flujo
+
+```mermaid
+flowchart TD
+  A[Inicio] --> B[Seleccionar tipo de lista]
+  B --> C[Crear LinkedList personalizada]
+  C --> D[Mostrar menú principal]
+  D -->|1 Insertar| E[Agregar elemento]
+  D -->|2 Eliminar| F[Quitar elemento]
+  D -->|3 Buscar| G[Comprobar existencia]
+  D -->|4 Mostrar| H[Imprimir en consola]
+  D -->|5 Ejemplos| I[Agregar datos de prueba]
+  D -->|0 Salir| J[Finalizar]
+```
+
+---
+
+## 🧪 Pruebas
+
+El archivo `StackQueueTests.java` incluye pruebas simples de pila y cola.
+Se recomienda migrarlas a **JUnit 5** para validaciones automáticas.
+
+Ejemplo de prueba manual esperada:
+
+```
+Push → 1, 2, 3
+Pop → 3
+Peek → 2
+```
+
+---
+
+## 📌 Limitaciones conocidas
+
+* No es **thread-safe**.
+* No incluye **iteradores** ni acceso por índice (`get(i)`).
+* Las pruebas son manuales y limitadas.
+
+---
 
 
+## ✨ Autores
+
+* Erick Mauricio Santiago Díaz (@Erick-MSD)
+* Josué David Murillo Gómez (@Josuemgd15)
+* Santiago Sebastian Rojo Marquez (@Sanlaan)
+* Daniel Isai Sanchez Guadarrama (@DanielIsaiSG)
+
+```
